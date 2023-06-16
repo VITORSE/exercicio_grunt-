@@ -1,0 +1,73 @@
+@import 'variaveis.less';
+
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(max-width: 1023px)";
+
+#vars() {
+    mainFont: 'Roboto', sans-serif;
+    backgroundColor: #eb3b5a;
+    titleFont: 'Lobster', cursive;
+    textColor: white;
+    .button() {
+        backgroundColor: #f7b731;
+        textColor: black;
+    }
+}
+
+// @import 'reset.less';
+
+body {
+    font-family: #vars[mainFont];
+    background-color: #vars[backgroundColor];
+    color: #vars[textColor];
+}
+
+h1 {
+    font-family: #vars[titleFont];
+    font-size: 2em;
+}
+
+main {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 2em;
+    text-align: center;
+}
+
+button {
+    padding: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-top: 16px;
+    border-radius: 8px;
+    background-color: #vars.button[backgroundColor];
+    color: #vars.button[textColor];
+    font-family: #vars[mainFont];
+}
+
+input {
+    display: block;
+    margin: 16px auto 0;
+    font-size: 2em;
+    max-width: 120px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    color: white;
+    border-bottom: 6px solid white;
+}
+
+.resultado {
+    padding: 16px;
+    margin-top: 60px;
+    border: 8px dotted white;
+    display: none;
+
+    span {
+        font-weight: bold;
+        font-size: 3em;
+        display: block;
+    }
+}
